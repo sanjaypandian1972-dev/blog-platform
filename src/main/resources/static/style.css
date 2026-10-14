@@ -1,0 +1,138 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f6fb;
+    color: #242b3a;
+}
+
+header {
+    text-align: center;
+    padding: 35px 15px;
+    background: #3448a5;
+    color: white;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 38px;
+}
+
+header p {
+    margin-bottom: 0;
+}
+
+main {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 0 18px;
+}
+
+.panel, .post-card {
+    background: white;
+    padding: 24px;
+    border-radius: 12px;
+    margin-bottom: 24px;
+    box-shadow: 0 3px 14px #0000000b;
+}
+
+.auth-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border: 1px solid #d5d9e5;
+    border-radius: 7px;
+    font: inherit;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button {
+    background: #3448a5;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    padding: 11px 16px;
+    cursor: pointer;
+    margin: 5px 5px 5px 0;
+}
+
+button:hover {
+    background: #253681;
+}
+
+button.secondary {
+    background: #687080;
+}
+
+button.danger {
+    background: #bd3547;
+}
+
+.post-card h3 {
+    margin-top: 0;
+    font-size: 24px;
+}
+
+.post-meta {
+    color: #737b8b;
+    font-size: 13px;
+}
+
+.post-content {
+    white-space: pre-wrap;
+    line-height: 1.7;
+    overflow-wrap: anywhere;
+}
+
+.comments {
+    border-top: 1px solid #e4e7ee;
+    margin-top: 20px;
+    padding-top: 12px;
+}
+
+.comment {
+    background: #f5f6fa;
+    padding: 12px;
+    border-radius: 7px;
+    margin: 8px 0;
+}
+
+.hidden {
+    display: none !important;
+}
+
+#message {
+    color: #3448a5;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #737b8b;
+}
+
+@media (max-width: 600px) {
+    .auth-grid {
+        grid-template-columns: 1fr;
+    }
+
+    header h1 {
+        font-size: 30px;
+    }
+
+    .panel, .post-card {
+        padding: 17px;
+    }
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlogSpace</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>BlogSpace</h1>
+    <p>Share your thoughts with the world.</p>
+    <div id="account"></div>
+</header>
+
+<main>
+    <section class="panel" id="authPanel">
+        <h2>Welcome</h2>
+
+        <div class="auth-grid">
+            <form id="registerForm">
+                <h3>Create account</h3>
+                <input id="regUsername" placeholder="Username" required>
+                <input id="regPassword" type="password"
+                       placeholder="Password" required minlength="8">
+                <button type="submit">Register</button>
+            </form>
+
+            <form id="loginForm">
+                <h3>Log in</h3>
+                <input id="loginUsername" placeholder="Username" required>
+                <input id="loginPassword" type="password"
+                       placeholder="Password" required>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </section>
+
+    <section class="panel hidden" id="editorPanel">
+        <h2 id="editorTitle">Write a blog post</h2>
+        <form id="postForm">
+            <input id="postTitle" placeholder="Post title" required>
+            <textarea id="postContent" rows="5"
+                      placeholder="Write your thoughts..." required></textarea>
+            <button type="submit" id="savePost">Publish Post</button>
+            <button type="button" id="cancelEdit" class="secondary hidden">
+                Cancel Edit
+            </button>
+        </form>
+    </section>
+
+    <section>
+        <h2>Latest Posts</h2>
+        <p id="message" role="status"></p>
+        <div id="posts"></div>
+    </section>
+</main>
+
+<footer>
+    <p>BlogSpace · A place for your ideas</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
